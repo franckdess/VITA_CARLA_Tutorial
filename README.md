@@ -29,7 +29,7 @@ ___
 
    This launches the simulator window in full-screen, and you should be able now to drive around the city using the WASD keys, and Q for toggling reverse gear.
 
-   ![Simulator window](/Users/franckdessimoz/Desktop/Data Science - MA Semestre 3/Semester project - VITA Lab/Tutorial/Ressources/simulator_window.png)
+   ![Simulator window](https://raw.githubusercontent.com/franckdess/VITA_CARLA_Tutorial/master/images/simulator_window.png)
 
    You can find more information about the simulator and the configuration [here](https://carla.readthedocs.io/en/stable/getting_started/).
 
@@ -195,7 +195,7 @@ Eventhough there is a lot of dataset already existing online, CARLA allows us to
    python3 collect.py
    ```
 
-   ![debug_screen](/Users/franckdessimoz/Desktop/Data Science - MA Semestre 3/Semester project - VITA Lab/Tutorial/Ressources/debug_screen.jpg)
+   ![debug_screen](https://raw.githubusercontent.com/franckdess/VITA_CARLA_Tutorial/master/images/debug_screen.jpg)
 
     To see the debug screen above showing all the non player agents:
 
@@ -249,7 +249,7 @@ The left part of the image below represents the ego-centric view images that are
 - RGB bird view
 - Semantic segmented bird view
 
-![datac_vita](/Users/franckdessimoz/Desktop/Data Science - MA Semestre 3/Semester project - VITA Lab/Tutorial/Ressources/datac_vita.png)
+![datac_vita](https://raw.githubusercontent.com/franckdess/VITA_CARLA_Tutorial/master/images/datac_vita.png)
 
 Here we provide a brief documentation on how to augment the dataset. This can be achieved by increasing the number of cameras, changing the camera position or changing the type of output.
 
@@ -299,7 +299,7 @@ The CARLA simulator provides many different output as images. The default output
 - Depth: `PostProcessing='Depth'`
 - Semantic segmentation: `PostProcessing='SemanticSegmentation'`
 
-![](/Users/franckdessimoz/Desktop/Data Science - MA Semestre 3/Semester project - VITA Lab/Tutorial/Ressources/all_3_post_process.png)
+![](https://raw.githubusercontent.com/franckdess/VITA_CARLA_Tutorial/master/images/all_3_post_process.png)
 
 The semantic segementation output is possible since the towns are built using UnrealEngine. In UnrealEngine, each element has a label. The label is encoded in the red channel of the image provided by the server. A pixel with a red value of `x` displays an object with tag `x`. This implies that the output image seems to black at first, and need to be postprocessed, in order to obtain the above image. The following tags are currently available:
 
