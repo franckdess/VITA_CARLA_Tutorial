@@ -342,13 +342,13 @@ def convert_segmented(image_type, episode, data_point_number):
 		scipy.misc.imsave(os.path.join(episode, top_name), top)
 ```
 
-The new file `VITA_post_process.py` can be found [here]().
+The new file `VITA_post_process.py` can be found [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/VITA_post_process.py).
 
 ##### VITA dataset
 
 To collect the same dataset as we did, with the 4 types of camera:
 
-1. Download [here]() our version of the configuration script `VITA_coil_training_dataset.py`, which is based on `coil_training_dataset.py`. 
+1. Download [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/VITA_coil_training_dataset.py) our version of the configuration script `VITA_coil_training_dataset.py`, which is based on `coil_training_dataset.py`. 
 
 2. Modify the file `collect.py` in `data-collector` by changing this line:
 
@@ -364,7 +364,7 @@ To collect the same dataset as we did, with the 4 types of camera:
 
    in order to avoid typing it manually in the terminal.
 
-3. Download the post processing script mentionned above [here]().
+3. Download the post processing script mentionned above [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/VITA_post_process.py).
 
 4. Run the code by following the instructions at the [beginning of this section](#Data collector).
 
@@ -411,10 +411,10 @@ _____
 
 3. Download the following 4 ResNet models and place them the `VITA` folder that you just created. There is one ResNet for each type of input.
 
-   1. [resnet34imnet10S2_central_rgb.yaml]()
-   2. [resnet34imnet10S2_central_seg.yaml]()
-   3. [resnet34imnet10S2_top_rgb.yaml]()
-   4. [resnet34imnet10S2_top_seg.yaml]()
+   1. [resnet34imnet10S2_central_rgb.yaml](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/resnet34imnet10S2_central_rgb.yaml)
+   2. [resnet34imnet10S2_central_seg.yaml](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/resnet34imnet10S2_central_seg.yaml)
+   3. [resnet34imnet10S2_top_rgb.yaml](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/resnet34imnet10S2_top_rgb.yaml)
+   4. [resnet34imnet10S2_top_seg.yaml](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/resnet34imnet10S2_top_seg.yaml)
 
 4. Open the file `coil_agent.py` in `coiltraine/drive`and modify the line
 
@@ -442,7 +442,7 @@ _____
    self.fc = nn.Linear(3072, num_classes)
    ```
 
-6. In order to perform the test process using the different cameras, we modified the file `corl_2017.py` in `coiltraine/carla08/driving_benchmark/experiment_suites`. The updated version can be found [here]().
+6. In order to perform the test process using the different cameras, we modified the file `corl_2017.py` in `coiltraine/carla08/driving_benchmark/experiment_suites`. The updated version can be found [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/corl_2017.py).
 
    Depending on the camera you are using for testing, you will need to modify the parameter `camera_central_rgb` in this line:
 
