@@ -442,7 +442,7 @@ _____
    self.fc = nn.Linear(3072, num_classes)
    ```
 
-6. In order to perform the test process using the different cameras, we modified the file `nocrash_new_weather_town_suite.py` in `coiltraine/carla08/driving_benchmark/experiment_suites`. The updated version can be found [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/nocrash_new_weather_town_suite.py).
+6. In order to perform the test process using the different cameras, we modified the file `nocrash_new_weather_town_suite.py` in `coiltraine/coil_core/drive/suites`. The updated version can be found [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/nocrash_new_weather_town_suite.py).
 
    Depending on the camera you are using for testing, you will need to modify the parameter `camera_central_rgb` in this line:
 
