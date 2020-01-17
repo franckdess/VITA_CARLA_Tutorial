@@ -452,7 +452,9 @@ _____
 
    with the appropriate camera. The different cameras are already set up, you only have to change the name of the parameter. You can choose among these parameters: `camera_central_rgb`, `camera_central_seg`, `camera_top_rgb` or `camera_top_seg`.
 
-7. In the file `coil_dataset.py` in `coiltraine/coil_core/input` modify the line
+7. To allow us to use the semantic segmented images sent back from the server during the test process, we also modify the file `coil_agent.py` in `coiltraine/drive`. Indeed, when the semantic segmentation post process is applied to the images, the server sends back a 2D-array containing the labels. In order to feed this array into the network, we need to convert this array into an image. You can find the updated file [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/coil_agent.py).
+
+8. In the file `coil_dataset.py` in `coiltraine/coil_core/input` modify the line
 
    ```python
    rgb = 'NAME_OF_THE_INPUT_' + data_point_number + '.png'
@@ -460,7 +462,7 @@ _____
 
    with the appropriate `NAME_OF_THE_INPUT_` corresponding to the type of inputs you are using. You can choose among `CentralRGB_`, `CentralSemanticSeg_`, `TopRGB_` or `TopSemanticSeg_`. Note that this names correspond to the basic denomination of the images in your datasets. You will need to change this each time you run the test process to be consistent with your dataset.
 
-8. To run the training process, the model, the command becomes:
+9. To run the training process, the model, the command becomes:
 
    ```bash
    python3 coiltraine.py --gpus 0 --single-process train -e resnet34imnet10S2_central_rgb --folder VITA -de NocrashNewWeatherTown_Town02 NocrashNewWeather_Town01 NocrashTraining_Town01 NocrashNewTown_Town02
@@ -470,7 +472,7 @@ _____
 
    **Remark 2**: make sure to set the `COIL_DATASET_PATH` variable correctly before running the process.
 
-9. To run the validation process, the command becomes:
+10. To run the validation process, the command becomes:
 
    ```bash
    python3 coiltraine.py --gpus 0 --single-process validation -e resnet34imnet10S2_central_rgb --folder VITA -vd CoILVal1_central_rgb -de NocrashNewWeatherTown_Town02 NocrashNewWeather_Town01 NocrashTraining_Town01 NocrashNewTown_Town02
@@ -478,7 +480,7 @@ _____
 
    Where the same remarks as above applies for the parameter `resnet34imnet10S2_central_rgb` and `CoILVal1_central_rgb`.
 
-10. To run the test process, the command becomes:
+11. To run the test process, the command becomes:
 
     ```bash
     python3 coiltraine.py --gpus 0 --single-process drive -e resnet34imnet10S2_central_rgb --folder VITA -de NocrashNewWeatherTown_Town02 --docker carlagear
