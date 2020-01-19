@@ -2,7 +2,7 @@
 
 ___________________
 
-In this tutorial, we are going to explain step by step how to install the simulator, how to collect our own dataset, how to reproduce the models obtained in the paper *[Exploring the Limitations of Behavior Cloning for Autonomous Driving](https://github.com/felipecode/coiltr)*, how the inputs and outputs are handled, how the models are constructed and how to come over with our own models and benchmark.
+In this tutorial, we are going to explain step by step how to install the simulator, how to collect our own dataset, how to reproduce the results obtained in the paper *[Exploring the Limitations of Behavior Cloning for Autonomous Driving](https://github.com/felipecode/coiltr)*, how the inputs and outputs are handled, how the models are constructed and how to come over with our own models and benchmark.
 
 ### Requirements
 
