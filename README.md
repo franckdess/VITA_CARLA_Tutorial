@@ -285,8 +285,8 @@ settings.add_sensor(camera0)
 
 Where the parameters are:
 
-- `name`: the name of the output
-- `post_processing`: the post processing process (see [Output](#Output) section below)
+- `name`: the name of the output image
+- `post_processing`: the post-processing applied to the output image (see [Output](#Output) section below)
 - `WINDOW_WIDTH, WINDOW_HEIGHT`: size of the output image
 - `x, y, z`: camera position
 - `p, y, r`: camera rotation
@@ -364,7 +364,7 @@ To collect the same dataset as we did, with the 4 types of camera:
 
    in order to avoid typing it manually in the terminal.
 
-3. Download the post processing script mentionned above [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/VITA_post_process.py).
+3. Download the post-processing script mentionned above [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/VITA_post_process.py).
 
 4. Run the code by following the instructions at the [beginning of this section](#Data collector).
 
@@ -452,7 +452,7 @@ _____
 
    with the appropriate camera. The different cameras are already set up, you only have to change the name of the parameter. You can choose among these parameters: `camera_central_rgb`, `camera_central_seg`, `camera_top_rgb` or `camera_top_seg`.
 
-7. To allow us to use the semantic segmented images sent back from the server during the test process, we also modify the file `coil_agent.py` in `coiltraine/drive`. Indeed, when the semantic segmentation post process is applied to the images, the server sends back a 2D-array containing the labels. In order to feed this array into the network, we need to convert this array into an image. You can find the updated file [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/coil_agent.py).
+7. To allow us to use the semantic segmented images sent back from the server during the testing process, we also modify the file `coil_agent.py` in `coiltraine/drive`. Indeed, when the semantic segmentation post-processing is applied to the images, the server sends back a 2D-array containing the labels. In order to feed this array into the network, we need to convert it into an image. You can find the updated file [here](https://github.com/franckdess/VITA_CARLA_Tutorial/blob/master/coil_agent.py).
 
 8. In the file `coil_dataset.py` in `coiltraine/coil_core/input` modify the line
 
