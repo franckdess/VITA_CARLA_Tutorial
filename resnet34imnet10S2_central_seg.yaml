@@ -7,7 +7,7 @@ FINISH_ON_VALIDATION_STALE: None
 # A dictionary with all the sensors that are going to be used as input
 # this should match the train dataset
 SENSORS:
-  rgb: [3, 150, 200] # A RGB input sensor with three channels that is resized to 200x88
+  seg: [3, 150, 200] # A RGB input sensor with three channels that is resized to 200x88
 MEASUREMENTS:
   float_data: [31]  # Number of float data that must be read from the dataset
 BATCH_SIZE: 120
